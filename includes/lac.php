@@ -16,7 +16,7 @@ $lid = "";
     $unlike->bindParam(':s_id',$s_id,PDO::PARAM_INT);
     $unlike->bindParam(':plike',$plike,PDO::PARAM_INT);
     $unlike->execute();
-    $likebtn =  "<span onclick=\"likeUnlike('$plike')\" style='color:#ff928a;font-size:30px' data-toggle='tooltip' data-placement='top' title='".lang('liked')."' id='plike'><span class=\"fa fa-heart-o\"></span></span>";
+    $likebtn =  "<span onclick=\"likeUnlike('$plike')\" style='color:#ff928a;font-size:30px' data-toggle='tooltip' data-placement='top' title='".lang('liked')."' id='plike'><span class=\"fa fa-thumbs-o-up\"></span></span>";
 
     // update likes number
     $likes_sql = "SELECT id FROM likes WHERE post_id=:plike";
@@ -30,11 +30,11 @@ $lid = "";
     $makeChange->bindParam(':plike',$plike,PDO::PARAM_INT);
     $makeChange->execute();
     if ($likes_num == 0) {
-        $likenum = "<span class='fa fa-heart'></span> ".lang('no_likes');
+        $likenum = "<span class='fa fa-thumbs-up'></span> ".lang('no_likes');
     }elseif ($likes_num == 1){
-        $likenum = "1 <span class='fa fa-heart' style='color: #ff928a;'></span>";
+        $likenum = "1 <span class='fa fa-thumbs-up' style='color: #ff928a;'></span>";
     }else{
-        $likenum = $likes_num." <span class='fa fa-heart' style='color: #ff928a;'></span>";
+        $likenum = $likes_num." <span class='fa fa-thumbs-up' style='color: #ff928a;'></span>";
     }
     // Delete notification to user
     $get_post_authorId = $conn->prepare("SELECT author_id FROM wpost WHERE post_id=:plike");
@@ -59,7 +59,7 @@ $lid = "";
     $like->bindParam(':s_id',$s_id,PDO::PARAM_INT);
     $like->bindParam(':plike',$plike,PDO::PARAM_INT);
     $like->execute();
-    $likebtn = "<span onclick=\"likeUnlike('$plike')\" style='color:#ff928a;font-size:30px' data-toggle='tooltip' data-placement='top' title='".lang('u_liked_this')."' id='punlike'><span class=\"fa fa-heart\"></span></span>";
+    $likebtn = "<span onclick=\"likeUnlike('$plike')\" style='color:#ff928a;font-size:30px' data-toggle='tooltip' data-placement='top' title='".lang('u_liked_this')."' id='punlike'><span class=\"fa fa-thumbs-up\"></span></span>";
 
         // update likes number
         $likes_sql = "SELECT id FROM likes WHERE post_id=:plike";
@@ -73,11 +73,11 @@ $lid = "";
         $makeChange->bindParam(':plike',$plike,PDO::PARAM_INT);
         $makeChange->execute();
         if ($likes_num == 0) {
-        $likenum = "<span class='fa fa-heart'></span> ".lang('no_likes');
+        $likenum = "<span class='fa fa-thumbs-up'></span> ".lang('no_likes');
         }elseif ($likes_num == 1){
-            $likenum = "1 <span class='fa fa-heart' style='color: #ff928a;'></span>";
+            $likenum = "1 <span class='fa fa-thumbs-up' style='color: #ff928a;'></span>";
         }else{
-            $likenum = $likes_num." <span class='fa fa-heart' style='color: #ff928a;'></span>";
+            $likenum = $likes_num." <span class='fa fa-thumbs-up' style='color: #ff928a;'></span>";
         }
         // send notification to user
         $get_post_authorId = $conn->prepare("SELECT author_id FROM wpost WHERE post_id=:plike");

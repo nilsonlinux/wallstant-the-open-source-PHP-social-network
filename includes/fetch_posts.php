@@ -235,9 +235,9 @@ $c->bindParam(':get_post_id',$get_post_id,PDO::PARAM_INT);
 $c->execute();
 $c_num = $c->rowCount();
 if ($c_num > 0){
-    echo "<span id='likeUnlike_$get_post_id' style='cursor:pointer'><span onclick=\"likeUnlike('$get_post_id')\" style='color:#ff928a;font-size:30px' data-toggle='tooltip' data-placement='top' title='".lang('u_liked_this')."' id='punlike'><span class=\"fa fa-heart\"></span></span></span>";
+    echo "<span id='likeUnlike_$get_post_id' style='cursor:pointer'><span onclick=\"likeUnlike('$get_post_id')\" style='color:#ff928a;font-size:30px' data-toggle='tooltip' data-placement='top' title='".lang('u_liked_this')."' id='punlike'><span class=\"fa fa-thumbs-up\"></span></span></span>";
 }else{
-    echo "<span id='likeUnlike_$get_post_id' style='cursor:pointer'><span onclick=\"likeUnlike('$get_post_id')\" style='color:#ff928a;font-size:30px' data-toggle='tooltip' data-placement='top' title='".lang('liked')."' id='plike'><span class=\"fa fa-heart-o\"></span></span></span>";
+    echo "<span id='likeUnlike_$get_post_id' style='cursor:pointer'><span onclick=\"likeUnlike('$get_post_id')\" style='color:#ff928a;font-size:30px' data-toggle='tooltip' data-placement='top' title='".lang('liked')."' id='plike'><span class=\"fa fa-thumbs-o-up\"></span></span></span>";
 }
 $likes_sql = "SELECT id FROM likes WHERE post_id=:get_post_id";
 $likes = $conn->prepare($likes_sql);
@@ -245,11 +245,11 @@ $likes->bindParam(':get_post_id',$get_post_id,PDO::PARAM_INT);
 $likes->execute();
 $likes_num = $likes->rowCount();
 if ($likes_num == 0) {
-    $likenum = "<span class='fa fa-heart'></span> ".lang('no_likes');
+    $likenum = "<span class='fa fa-thumbs-up'></span> ".lang('no_likes');
 }elseif ($likes_num == 1){
-    $likenum = "1 <span class='fa fa-heart' style='color: #ff928a;'></span>";
+    $likenum = "1 <span class='fa fa-thumbs-up' style='color: #ff928a;'></span>";
 }else{
-    $likenum = thousandsCurrencyFormat($likes_num)." <span class='fa fa-heart' style='color: #ff928a;'></span>";
+    $likenum = thousandsCurrencyFormat($likes_num)." <span class='fa fa-thumbs-up' style='color: #ff928a;'></span>";
 }
 
 echo "<a href='javascript:void(0);' onclick=\"sharePost('$get_post_id','$check_path')\" class='post_like_comment_shareA' data-toggle='tooltip' data-placement='top' title='".lang('share_now')."'><span class=\"fa fa-share-alt\"></span></a>
