@@ -65,7 +65,7 @@ include_once $path."langs/set_lang.php";
         <!--============[ login sec ]============-->
         <div style="background: #fff; border-radius: 3px; width: 420px; padding: 15px; margin: 15px;color: #7b7b7b;" align="center">
             <? echo lang('already_have_an_account'); ?> <a href="login"><? echo lang('login_now'); ?></a>.<hr style="margin: 8px;">
-                <a href="?lang=english">English</a> &bull; <a href="?lang=العربية">العربية</a> &bull; <a href="?lang=portugues">PortuguesBR</a>
+                <a href="?lang=english">English</a> &bull; <a href="?lang=العربية">العربية</a> &bull; <a href="?lang=portugues">PortuguêsBR</a>
         </div>
     </div>
 
