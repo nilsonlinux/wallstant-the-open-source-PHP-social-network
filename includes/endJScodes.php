@@ -65,7 +65,7 @@ function likeUnlike(pl){
     data:{'pl':pl},
     dataType: "json",
         beforeSend:function(){
-            $('#likeUnlike_'+pl).html("<span onclick=\"return false;\" style='cursor: default;color:#ff928a;font-size:30px' data-toggle='tooltip' data-placement='top' title='<?php echo lang('please_wait'); ?>' id='plike'><span class=\"fa fa-thumbs-up\"></span></span>");
+            $('#likeUnlike_'+pl).html("<span onclick=\"return false;\" style='cursor: default;color:#ff928a;font-size:30px' data-toggle='tooltip' data-placement='top' title='<?php echo lang('please_wait'); ?>' id='plike'><span class=\"fa fa-heart\"></span></span>");
         },
         success:function(msg){
                 $('#likeUnlike_'+pl).html(msg[0]);
