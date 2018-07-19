@@ -32,7 +32,7 @@ if ($uCheckSessionCount == 0) {
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="<?php echo $dircheckPath; ?>home">Wallstant</a>
+            <a class="navbar-brand" href="<?php echo $dircheckPath; ?>home">Social Lite</a>
         </div>
         <div class="collapse navbar-collapse" id="myNavbar">
             <ul class="<?php echo lang('ul_navbar_nav1'); ?>">
@@ -45,7 +45,7 @@ if ($uCheckSessionCount == 0) {
                     $homePath = "../../home";
                 }
                 ?>
-                <li><a href="<?php echo $homePath; ?>" style="padding: 14px 10px;"><span style="font-size: 17px;" class="fa fa-home"></span> <?php echo lang('navbar_home'); ?></a></li>
+                <li><a href="<?php echo $homePath; ?>" style="padding: 16px 10px;"><span style="font-size: 17px;" class="fa fa-globe"></span> <?php echo lang('navbar_home'); ?></a></li>
                 <li><a href="javascript:void(0);" style="padding: 16px 10px;" id="nav_Noti_Btn"><span class="fa fa-bell"></span> <?php echo lang('notifications'); ?> <span id="notificationsCount"></span></a>
                 <div class="navbar_fetchBox" id="notifications_box">
                 <div style="position:relative;padding: 5px 10px;border-bottom: 1px solid #ccc;text-align: <?php echo lang('textAlign'); ?>"><?php echo lang('notifications'); ?>
@@ -70,7 +70,7 @@ if ($uCheckSessionCount == 0) {
                 </div>
                 <div id="nav_newNotify" data-show='0'></div>
                 </li>
-                <li><a href="<?php echo $dircheckPath; ?>messages/" style="padding: 16px 10px;"><span class="fa fa-envelope"></span> <?php echo lang('messages'); ?> <span id="messagesCount"></span></a>
+                <li><a href="<?php echo $dircheckPath; ?>messages/" style="padding: 16px 10px;"><span class="fa fa-comments"></span> <?php echo lang('messages'); ?> <span id="messagesCount"></span></a>
                 </li>
             </ul>
             <ul class="<?php echo lang('ul_navbar_nav2'); ?>">
