@@ -3,11 +3,11 @@ switch ($_SESSION['language']) {
 case 'English':
 	include_once $path."langs/english.php";
 	break;
+case 'portugues':
+	include_once $path."langs/portugues.php";
+	break;
 case 'العربية':
 	include_once $path."langs/arabic.php";
-	break;
-case 'PortuguêsBR':
-	include_once $path."langs/portugues.php";
 	break;
 default:
 	$_SESSION['language'] = "English";
