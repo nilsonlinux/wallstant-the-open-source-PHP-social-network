@@ -61,7 +61,7 @@ include_once $path."langs/set_lang.php";
         </div>
         <div style="background: #fff; border-radius: 3px; max-width: 800px; padding: 15px; margin:auto;margin-top: 15px;color: #7b7b7b;" align="center">
             <? echo lang('dont_have_an_account'); ?> <a href="signup"><? echo lang('signup'); ?></a> <? echo lang('for_free'); ?>.<hr style="margin: 8px;">
-                <a href="?lang=english">English</a> &bull; <a href="?lang=العربية">العربية</a>  &bull; <a href="?lang=portugues">portugues</a>
+                <a href="?lang=english">English</a> &bull; <a href="?lang=العربية">العربية</a> &bull; <a href="?lang=portugues">portugues</a>
         </div>
 
 <script type="text/javascript">
