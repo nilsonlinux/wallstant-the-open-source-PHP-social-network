@@ -1,7 +1,6 @@
 <?php
 error_reporting(E_ALL ^ E_NOTICE);
 session_start();
-$page="post";
 include("../config/connect.php");
 include("../includes/fetch_users_info.php");
 include ("../includes/time_function.php");

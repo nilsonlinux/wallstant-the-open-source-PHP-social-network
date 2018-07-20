@@ -65,7 +65,7 @@ if (is_dir("imgs/")) {
 <?php include "../includes/navbar_main.php"; ?>
 
 <?php
-if (filter_var(htmlspecialchars($_GET['u']),FILTER_SANITIZE_STRING) == $row_username) {
+if (htmlentities(htmlspecialchars($_GET['u'])) == $row_username) {
 ?>
 <!--=============================[ Container ]=====================================-->
         <div class="profile_sec1_sec2" align="center">

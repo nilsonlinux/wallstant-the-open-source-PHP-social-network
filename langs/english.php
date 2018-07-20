@@ -326,7 +326,6 @@ function lang($txt){
     'username_not_exists' => 'User name not exists! No User name like that you entered',
     'friends' => 'Friedns',
     'requests' => 'Requests',
-    'continue_reading' => 'Continue reading',
 
 
    // ==========================================
